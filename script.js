@@ -5,11 +5,11 @@ const div = document.getElementById("output");
 
 function wait(delay) {
     return new Promise((resolve) => {
-        setTimeout(resolve, delay);
+        setTimeout(txt.value, delay);
     });
 }
 
 btn.addEventListener("click", async () => {
-    await wait(dly.value);
-    div.textContent = txt.value;
+    let data=await wait(dly.value);
+    div.textContent = data;
 });
